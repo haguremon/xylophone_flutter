@@ -3,9 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-void main() {
-  runApp(XylophoneApp());
-}
+void main() => runApp(XylophoneApp());
+
 
 // ignore: use_key_in_widget_constructors
 class XylophoneApp extends StatelessWidget {
