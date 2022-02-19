@@ -16,12 +16,12 @@ class XylophoneApp extends StatelessWidget {
     player.play('note$soundNumber.wav');
   }
 
-Widget buildkey({Color? color, int soundNumber = 0}) {
-   return Expanded(
+  Widget buildkey({Color? color, int soundNumber = 0}) {
+    return Expanded(
       child: TextButton(
           style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(
-              color,
+            color,
           )),
           onPressed: () {
             //libraryをimportしたことによってAudioCacheを使ってローカルのサウンドファイルを作成することに成功した
@@ -41,93 +41,13 @@ Widget buildkey({Color? color, int soundNumber = 0}) {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Expanded(
-                child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                      Colors.red,
-                    )),
-                    onPressed: () {
-                      //libraryをimportしたことによってAudioCacheを使ってローカルのサウンドファイルを作成することに成功した
-                      playSound(1);
-                    },
-                    child: const Text('')),
-              ),
-              Expanded(
-                child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                      Colors.orange,
-                    )),
-                    onPressed: () {
-                      //libraryをimportしたことによってAudioCacheを使ってローカルのサウンドファイルを作成することに成功した
-                      playSound(2);
-                    },
-                    child: const Text('')),
-              ),
-              Expanded(
-                child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                      Colors.yellow,
-                    )),
-                    onPressed: () {
-                      //libraryをimportしたことによってAudioCacheを使ってローカルのサウンドファイルを作成することに成功した
-                      playSound(3);
-                    },
-                    child: const Text('')),
-              ),
-              Expanded(
-                child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                      Colors.green,
-                    )),
-                    onPressed: () {
-                      //libraryをimportしたことによってAudioCacheを使ってローカルのサウンドファイルを作成することに成功した
-                      playSound(4);
-                    },
-                    child: const Text('')),
-              ),
-              Expanded(
-                child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                      Colors.lightGreen,
-                    )),
-                    onPressed: () {
-                      //libraryをimportしたことによってAudioCacheを使ってローカルのサウンドファイルを作成することに成功した
-                      playSound(5);
-                    },
-                    child: const Text('')),
-              ),
-              Expanded(
-                child: TextButton(
-                    style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                      Colors.blue,
-                    )),
-                    onPressed: () {
-                      //libraryをimportしたことによってAudioCacheを使ってローカルのサウンドファイルを作成することに成功した
-                      playSound(6);
-                    },
-                    child: const Text('')),
-              ),
-              Expanded(
-                child: TextButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                        Colors.purple,
-                      ),
-                    ),
-                    onPressed: () {
-                      //libraryをimportしたことによってAudioCacheを使ってローカルのサウンドファイルを作成することに成功した
-                      playSound(7);
-                    },
-                    child: const Text(
-                      '',
-                    )),
-              ),
+              buildkey(color: Colors.red, soundNumber: 1),
+              buildkey(color: Colors.orange, soundNumber: 2),
+              buildkey(color: Colors.yellow, soundNumber: 3),
+              buildkey(color: Colors.green, soundNumber: 4),
+              buildkey(color: Colors.lightGreen, soundNumber: 5),
+              buildkey(color: Colors.blue, soundNumber: 6),
+              buildkey(color: Colors.purple, soundNumber: 7),
             ],
           ),
         ),
